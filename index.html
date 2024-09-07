@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="imagem/png" href="imagens/logo.jpg" />
+        <title>Pokédex Imersão</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Olimpíadas</title>
-</head>
-
-<body>
-    <header>
-        <h1>Atletas do Brasil</h1>
-    </header>
-    <main>
-        <section>
-            <input type="text" placeholder="Digite o nome do atleta ou esporte" id="campo-pesquisa">
-            <button onclick="pesquisar()">Pesquisar</button>
-        </section>
-        <section class="resultados-pesquisa" id="resultados-pesquisa">
-        </section>
-    </main>
-    <footer>
-        <p>2024 - Atletas do Brasil. Todos os direitos reservados</p>
-        <p>Entre em contato pelo email: guilherme@atletas.com.br</p>
-    </footer>
-    <script src="dados.js"></script>
-    <script src="app.js"></script>
-</body>
-
+    <body>
+        <header>
+            <h1>Pokedex</h1>
+        </header>
+        <main>
+            <section>
+                <input type="text" placeholder="Busque por nome ou tipo de Pokémon" id="campo-pesquisa">
+                <button onclick="pesquisar()">Pesquisar</button>
+            </section>
+            <section class="resultados-pesquisa">
+                <div class="cards-container" id="resultados-pesquisa">
+                    <!-- Cards gerados dinamicamente serão inseridos aqui -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>2024 - Pokédex Imersão. Todos os direitos reservados.</p>
+            <p>Entre em contato pelo <a href="https://www.linkedin.com/in/mateusopaiva/" target="_blank">LinkedIn</a>.</p>
+        </footer>        
+        <script src="datasets/dados.js"></script>
+        <script src="app.js"></script>
+        <script>
+            // Adiciona um ouvinte de evento para detectar o "Enter"
+            document.getElementById("campo-pesquisa").addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Evita o comportamento padrão (se necessário)
+                    pesquisar(); // Chama a função pesquisar
+                }
+            });
+        </script>
+    </body>
 </html>

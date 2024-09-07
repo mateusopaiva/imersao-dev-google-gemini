@@ -4,7 +4,10 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
+    background-image: url('imagens/pokebola.jpg'); /* Substitua 'background.jpg' pelo nome do seu arquivo de imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área do fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -69,36 +72,149 @@ section button:hover {
     border-radius: 0.6rem; /* Borda arredondada */
 }
 
+/* Estiliza o contêiner dos cards */
+.cards-container {
+    display: grid; /* Usa grid layout para o contêiner */
+    gap: 1.2rem; /* Espaço entre os cards */
+    width: 80%; /* Garante que o contêiner ocupe toda a largura disponível */
+    padding: 1rem; /* Espaço interno do contêiner */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
 /* Estiliza cada item de resultado */
 .item-resultado {
     background: #FFFFFF; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 0.8rem; /* Borda arredondada mais suave */
+    padding: 1.2rem; /* Espaçamento interno */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
 }
 
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+/* Efeito de hover para os cards */
+.item-resultado:hover {
+    transform: scale(1.02); /* Aumenta o tamanho do card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao passar o mouse */
 }
 
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+/* Estiliza a área do cabeçalho (imagem e nome) */
+.item-header {
+    display: flex;
+    flex-direction: row; /* Coloca a imagem e o título na horizontal */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    margin-bottom: 1.2rem; /* Espaço abaixo do cabeçalho */
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+/* Estiliza a área do cabeçalho (imagem e nome) */
+.item-header {
+    display: flex;
+    flex-direction: row; /* Coloca a imagem e o título na horizontal */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    margin-bottom: 1.2rem; /* Espaço abaixo do cabeçalho */
+    padding: 1rem; /* Espaçamento interno do cabeçalho */
+    background-color: #f5f5f5; /* Cor de fundo do cabeçalho */
+    border-radius: 0.8rem; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
 }
 
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
+/* Estiliza a imagem dentro do cabeçalho */
+.item-header img {
+    margin-right: 12px; /* Espaço entre a imagem e o texto */
+    border-radius: 0.6rem; /* Borda arredondada na imagem */
+    width: 90px; /* Tamanho fixo para a imagem */
+    height: 90px; /* Tamanho fixo para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço definido sem distorção */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de hover para a área do cabeçalho */
+.item-header:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+
+/* Estiliza o título e o ID no cabeçalho */
+.item-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title h2 {
+    font-size: 1.6rem; /* Tamanho da fonte */
+    color: #333333; /* Cor do texto */
+    margin: 0; /* Remove a margem padrão do título */
+}
+
+.item-id {
+    font-size: 1rem; /* Tamanho da fonte do ID */
+    color: #777777; /* Cor do texto do ID */
+    font-weight: 400; /* Peso da fonte mais leve */
+    margin-top: 0.3rem; /* Espaço acima do ID */
+}
+
+/* Centraliza a seção de informações na página */
+.item-info-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    width: 100%; /* Garante que o contêiner ocupe a largura total */
+    padding: 1rem; /* Adiciona um pouco de espaçamento interno, se necessário */
+}
+
+/* Estiliza a seção de informações combinadas */
+.item-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de igual largura */
+    gap: 1rem; /* Espaço entre as colunas e entre linhas */
+    max-width: 600px; /* Limita a largura máxima para melhor apresentação */
+    width: 100%; /* Garante que o conteúdo ocupe a largura disponível */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
+}
+
+/* Estiliza cada coluna de informações */
+.info-column {
+    display: flex;
+    flex-direction: column; /* Exibe as informações uma embaixo da outra */
+    gap: 0.8rem; /* Espaço entre as linhas de informações */
+}
+
+/* Estiliza as evoluções para ocupar toda a largura */
+.item-info p:last-child {
+    grid-column: span 2; /* Faz com que o último parágrafo ocupe duas colunas */
+}
+
+
+
+/* Estiliza os parágrafos dentro dos itens de resultado */
+.item-resultado p {
+    margin: 0; /* Remove a margem padrão dos parágrafos */
+    font-size: 1rem; /* Tamanho da fonte dos parágrafos */
+}
+
+/* Estiliza os rótulos dentro dos parágrafos */
+.item-resultado strong {
+    font-weight: 600; /* Destaca os rótulos */
+}
+
+.evolucoes-container {
+    display: flex;          /* Alinha o texto e as imagens na horizontal */
+    align-items: center;    /* Centraliza o conteúdo verticalmente */
+    flex-wrap: wrap;        /* Permite quebra de linha, se necessário */
+}
+
+.evolucoes-container strong {
+    margin-right: 12px;     /* Espaço entre o texto "Evoluções" e a primeira imagem */
+}
+
+.evolucao-img {
+    margin-right: 6px;      /* Espaço entre as imagens e a seta */
+    border-radius: 0.6rem;  /* Borda arredondada na imagem */
+    width: 90px;            /* Tamanho fixo para a imagem */
+    height: 90px;           /* Tamanho fixo para a imagem */
+    object-fit: cover;      /* Garante que a imagem cubra o espaço definido sem distorção */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
 }
 
 /* Estiliza o rodapé da página */
