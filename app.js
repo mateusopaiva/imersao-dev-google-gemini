@@ -79,7 +79,7 @@ function pesquisar() {
                     </div>
                 </div>
                 <p>Por favor, verifique o nome ou tipo digitado e tente novamente.</p>
-                <p>Precisa de ajuda? Consulte a lista completa de Pokémon.</p>
+                <p>Certifique-se de que o nome ou tipo de Pokémon foi digitado corretamente.</p>
             </div>
         `;
     }
