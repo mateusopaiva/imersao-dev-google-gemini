@@ -45,6 +45,7 @@ dev-immersion-google-gemini/
 ```
 
 ## 💨 Layout do projeto
+![Gif](https://github.com/user-attachments/assets/23d54431-7438-45df-bf1d-ac3dd07efbd4)
 
 ## 📚 Technologies Used:
 <div style="display: inline_block">
@@ -58,4 +59,3 @@ dev-immersion-google-gemini/
 ## 🙋‍♂️ Developers
 | [<img src="https://avatars.githubusercontent.com/u/106707389?s=400&u=c01ee84b19a35b975ac9634deb3baf48d681a4c5&v=4" width=115><br><sub>Mateus Paiva</sub>](https://github.com/mateusopaiva)| [<img src="https://user-images.githubusercontent.com/106707389/187273477-45a53362-7158-4c5e-b0f5-68c92aec9182.png" width=115><br><sub>Alura</sub>](https://www.alura.com.br) |
 | :---: | :---: |
-
