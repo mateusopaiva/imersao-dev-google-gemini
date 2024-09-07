@@ -1,4 +1,4 @@
-<h6> Don't speak Portuguese? <a href="#">Click here</a> to view this page in English.</h6>
+<h6> Don't speak Portuguese? <a href="https://github.com/mateusopaiva/imersao-dev-google-gemini/blob/main/README-en.md">Click here</a> to view this page in English.</h6>
 
 <h1 align="center">Pokédex - Imersão Dev com Google Gemini</h1>
 
@@ -42,10 +42,10 @@ imersao-dev-google-gemini/
 ├── README.md            # Documentação do projeto em português
 │
 └── style.css            # O design da página está aqui. Se você quiser mudar as cores ou a fonte, é só editar esse arquivo.
-
 ```
 
 ## 💨 Layout do projeto
+![Gif](https://github.com/user-attachments/assets/10d0aee4-0f37-4ec1-b009-3425892627e2)
 
 ## 📚 Tecnologias usadas:
 <div style="display: inline_block">
@@ -59,4 +59,3 @@ imersao-dev-google-gemini/
 ## 🙋‍♂️ Desenvolvedores
 | [<img src="https://avatars.githubusercontent.com/u/106707389?s=400&u=c01ee84b19a35b975ac9634deb3baf48d681a4c5&v=4" width=115><br><sub>Mateus Paiva</sub>](https://github.com/mateusopaiva)| [<img src="https://user-images.githubusercontent.com/106707389/187273477-45a53362-7158-4c5e-b0f5-68c92aec9182.png" width=115><br><sub>Alura</sub>](https://www.alura.com.br) |
 | :---: | :---: |
-
